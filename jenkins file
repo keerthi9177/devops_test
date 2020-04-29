@@ -11,7 +11,7 @@ pipeline {
             echo 'hello World'
          }
          }
-      }
+      
       stage('shell') {
          steps {
            sh label: '', script: '''#!/bin/bash

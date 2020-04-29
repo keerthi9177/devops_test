@@ -10,7 +10,7 @@ timestamps {
          bat label: '', script: 'echo " running on windows"'
          }
    }
-   node('master') {
+   node('test') {
       stage('shell') {
          
            sh label: '', script: '''#!/bin/bash

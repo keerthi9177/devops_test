@@ -1,6 +1,11 @@
 pipeline {
    agent any
    node('windows-node') {
+    stage('gitrepo') {
+         steps {
+           git branch: 'test', credentialsId: 'd77798ab-f80f-4e2e-a41a-f9b5e77d345c', url: 'https://github.com/keerthi9177/devops_test.git'
+         }
+      }
      stage('bat file') {
          bat label: '', script: 'echo " running on windows"'
          }
